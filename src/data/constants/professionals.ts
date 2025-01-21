@@ -1,4 +1,4 @@
-import Professional from "../../core/professionals/Professional";
+import Professional from "@/core/professional/Professional";
 
 const professional: Professional[] = [
   {

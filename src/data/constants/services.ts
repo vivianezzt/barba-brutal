@@ -1,5 +1,4 @@
-import Service from "../../core/services/Service";
-
+import Service from "@/core/service/Service";
 
 const services: Service[] = [
   {

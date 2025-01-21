@@ -1,8 +1,7 @@
 /* eslint-disable react/react-in-jsx-scope */
 import services from "@/data/constants/services";
 import ItemService from "./ItemService";
-import TitleSection from "@/shared/TitleSection";
-
+import TitleSection from "../shared/TitleSection";
 
 export default function OurServices() {
   return (
