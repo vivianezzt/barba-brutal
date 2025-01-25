@@ -1,5 +1,4 @@
 /* eslint-disable react/react-in-jsx-scope */
-import Professional from "@/core/professional/Professional";
 import {
   IconBrandInstagram,
   IconBrandLinkedin,
@@ -9,6 +8,7 @@ import {
 } from "@tabler/icons-react";
 import Image from "next/image";
 import Avaliation from "../shared/Avaliation";
+import { Professional } from "@barbabrutal/core/src/professional";
 
 export interface ItemProfessionalProps {
   professional: Professional;

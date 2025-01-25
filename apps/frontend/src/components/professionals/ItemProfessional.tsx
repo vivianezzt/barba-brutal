@@ -1,7 +1,6 @@
 /* eslint-disable react/react-in-jsx-scope */
-
-import Professional from "@/core/professionals/Professional";
 import Avaliation from "@/shared/Avaliation";
+import { Professional } from "@barbabrutal/core/src/professional";
 import {
   IconBrandInstagram,
   IconBrandLinkedin,

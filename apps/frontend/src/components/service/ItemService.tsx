@@ -1,5 +1,6 @@
 /* eslint-disable react/react-in-jsx-scope */
-import Service from "@/core/service/Service";
+
+import { Service } from "@barbabrutal/core/src/service";
 import Image from "next/image";
 
 export interface ItemServiceProps {
