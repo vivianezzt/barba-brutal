@@ -40,7 +40,10 @@ body {
   }
 
   .button {
-    @apply inline-block px-4 py-2 text-white bg-zinc-700 rounded;
+    @apply inline-block px-4 py-2 text-white bg-zinc-600 rounded;
+  }
+  .input {
+    @apply p-2 m-2 bg-zinc-900 py-2 rounded;
   }
 
   .text-gradient {
