@@ -4,7 +4,7 @@ import CryptoProvider from "../provider/CryptoProvider";
 import UserRepository from "../provider/UserRepository";
 
 // casos de usos da aplicação para registrar um usuário (fluxos de negócio) - DDD: Application cse = Fluxo da aplicação
-export default class RegisterUser implements UseCase {
+export default class RegisterUser implements UseCase<User, void> {
   constructor(
     // 1º caso de uso: Registrar um usuário
     private readonly repo: UserRepository,
