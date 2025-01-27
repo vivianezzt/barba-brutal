@@ -38,73 +38,67 @@ export default function FormAuth() {
         setPhone('')
     }
     return (
-        <div className="flex justify-center items-center h-screen">
-            <Image src="/banners/principal.webp" alt="Banner" fill />
-            <div className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-full bg-black/80 gap-10">
+        <div className="h-screen">
+            <Image src="/banners/principal.webp" fill alt="Banner principal" />
+            <div className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-full gap-8 bg-black/80">
             <Logo />
             <div>
-                {mode === 'login' ? (
-                    // Condicional para exibir o título de login
-                    <h1 className="text-2xl font-light">Seja bem vindo!</h1>
-                ): 
-                (
-                    // Condicional para exibir o título de cadastro
-                    <h1 className="text-2xl font-light">Cadastro</h1>
+                {mode == 'login' ? (
+                    <h1 className="text-2xl font-bold">Seja bem vindo 🤘</h1>
+                ): (
+                    <h1 className="text-2xl font-bold">Cadastre-se 🤝</h1>
                 )}
             </div>
-            <div className="flex flex-col gap-3 w-96">
-                {mode === 'cadastro' && (
-                    // Condicional para exibir o campo de nome e telefone
-                   <>
-                     <input 
-                     type="text" 
-                     value={name} 
-                     onChange={e => setName(e.target.value)} 
-                     placeholder="Nome" 
-                     className="input"/>
-                   </>
+            <div className="flex flex-col gap-4 w-90">
+                {mode == 'cadastro' && (
+                    <input 
+                    type="text" 
+                    value={name} 
+                    onChange={e => setName(e.target.value)} 
+                    placeholder="Nome" 
+                    className="input" 
+                    />
                 )}
-               {mode === 'cadastro' && (
-                // Condicional para exibir o campo de telefone
-                 <input 
-                 type="tel" 
-                 value={phone} 
-                 onChange={e => setPhone(e.target.value)}
-                 placeholder="Telefone" 
-                 className="input"/>
-               )}
                 <input 
-                type="text" 
+                type="email" 
                 value={email} 
-                onChange={e => setEmail(e.target.value)}
+                onChange={e => setEmail(e.target.value)} 
                 placeholder="E-mail" 
-                className="input"/>
+                className="input" 
+                />
                 <input 
-                type="text" 
+                type="password" 
                 value={password} 
-                onChange={e => setPassword(e.target.value)}
+                onChange={e => setPassword(e.target.value)} 
                 placeholder="Senha" 
-                className="input"/>
-               {/*Botão para submeter o formulário */}
-                <div className="flex gap-3">
-                    <button onClick={handleSubmit} className="button flex-1 flex justify-center bg-green-500 font-bold">
+                className="input" 
+                />
+                {mode == 'cadastro' && (
+                    <input 
+                    type="tel" 
+                    value={phone} 
+                    onChange={e => setPhone(e.target.value)} 
+                    placeholder="Telefone" 
+                    className="input" 
+                />
+                )}
+                <div className="flex gap-2">
+                    <button onClick={handleSubmit} className="button flex-1 font-bold bg-green-800">
                         {mode == 'login' ? 'Entrar' : 'Cadastrar'}
-                        </button>
-                    <Link href="/" className="button flex-1 flex justify-center font-bold">Cancelar</Link>
+                    </button>
+                    <Link href="/" className="button flex-1 font-bold  justify-center">Cancelar</Link>
                 </div>
                 <div className="flex mt-6">
-                    <button onClick={alterMode} className="flex-1 button-outline">
-                            {mode == 'login' ? (
-                                // Condicional para exibir a mensagem de cadastro
-                                <div>Ainda não tem conta? <span className="text-purple-400 font-bold">Cadastre-se!</span></div>
-                            ) : (
-                                // Condicional para exibir a mensagem de login
-                                <div>Já tem conta? {' '}<span className="text-purple-400 font-bold">Entre na plataforma!</span></div>
-                            )}
-                        </button>
+                    <button onClick={alterMode} className="button-outline flex-1">
+                        {mode == 'login' ? (
+                        <div>Ainda não tem conta? <span className="text-yellow-400 font-bold">Cadastre-se</span></div>
+                        ): (
+                        <div>Já tem conta? <span className="text-yellow-400 font-bold">Entre na plataforma</span></div>
+                        )}  
+                    </button>                
+                </div>
                 </div>
             </div>
-            </div>
         </div>
-    )
+    )  
 }
