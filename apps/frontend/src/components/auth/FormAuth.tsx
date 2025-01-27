@@ -24,9 +24,18 @@ export default function FormAuth() {
         if(mode == 'login'){
             const token = await httpPost('auth/login', { email, password })
             console.log(token)
+            cleanForm()
         }else{
-            console.log('Cadastro', { name, email, password, phone})
+            await httpPost('auth/register', { name, email, password, phone })
+            cleanForm()
         }
+    }
+    function cleanForm(){
+        // Função para limpar os campos do formulário
+        setName('')
+        setEmail('')
+        setPassword('')
+        setPhone('')
     }
     return (
         <div className="flex justify-center items-center h-screen">
