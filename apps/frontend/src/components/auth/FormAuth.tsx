@@ -4,6 +4,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { useState } from "react"
 import useAPI from "../../data/hooks/useAPI"
+import { IconEye, IconEyeCancel, IconEyeOff } from "@tabler/icons-react"
 
 /* eslint-disable react/react-in-jsx-scope */
 export default function FormAuth() {
@@ -14,28 +15,35 @@ export default function FormAuth() {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [phone, setPhone] = useState('')
+    // Criando um estado para controlar a exibição da senha
+    const [showPassword, setShowPassword] = useState(false)
     // Importando a função de requisição HTTP
     const { httpPost } = useAPI()
     
     function alterMode(){
         setMode(mode == 'login' ? 'cadastro' : 'login') 
     }
+    function alterShowPassword(){
+        setShowPassword(!showPassword)
+    }
     async function handleSubmit(){
         if(mode == 'login'){
             const token = await httpPost('auth/login', { email, password })
-            console.log(token)
-            cleanForm()
+           console.log(token)
+           cleanForm()
+         
         }else{
             await httpPost('auth/register', { name, email, password, phone })
             cleanForm()
         }
     }
     function cleanForm(){
-        // Função para limpar os campos do formulário
         setName('')
         setEmail('')
         setPassword('')
         setPhone('')
+        setMode('login')
+        setShowPassword(false)
     }
     return (
         <div className="h-screen">
@@ -66,13 +74,29 @@ export default function FormAuth() {
                 placeholder="E-mail" 
                 className="input" 
                 />
-                <input 
-                type="password" 
+               <div className="flex input ">
+                 <input 
+                type={showPassword ? 'text' : 'password'}
                 value={password} 
                 onChange={e => setPassword(e.target.value)} 
                 placeholder="Senha" 
-                className="input" 
+                className="flex-1 bg-transparent outline-none"
                 />
+                {/* Adicionando o ícone de olho e mostar senha*/}
+                {showPassword ? (
+                    <IconEyeOff
+                    onClick={alterShowPassword} 
+                    size={24} 
+                    className="text-zinc-400"
+                    />
+                ): (
+                    <IconEye 
+                    onClick={alterShowPassword} 
+                    size={24} 
+                    className="text-zinc-400"
+                    />)}
+                
+               </div>
                 {mode == 'cadastro' && (
                     <input 
                     type="tel" 
