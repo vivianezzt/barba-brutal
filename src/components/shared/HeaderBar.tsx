@@ -1,15 +1,15 @@
 import Link from "next/link";
 import Logo from "./Logo";
 
-export default function HeaderBar(){
-    return(
-        <div className="flex items-center h-24 bg-black/60 text-white">
-            <nav className="flex items-center justify-between container"> 
+export default function HeaderBar() {
+    return (
+        <header className="flex h-24 items-center self-stretch bg-black/60">
+            <nav className="container flex items-center justify-between">
                 <Logo />
                 <div>
-                    <Link href="/enter">Entrar</Link>
+                    <Link href={"/entrar"}>Entrar</Link>
                 </div>
             </nav>
-        </div>
+        </header>
     )
 }
