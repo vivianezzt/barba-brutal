@@ -1,13 +1,14 @@
 import OurProfessionals from "@/components/professional/OurProfessionals";
 import OurServices from "@/components/service/OurServices";
 import Footer from "@/components/shared/Footer";
+import HeaderBar from "@/components/shared/HeaderBar";
 import SectionBackground from "@/components/shared/SectionBackground";
 
 
 export default function Home() {
   return (
     <div className="flex flex-col">
-      <h1 className="text-6xl">Lading page</h1>
+      <HeaderBar />
       <SectionBackground image="/banners/servicos.webp">
         <OurServices />
       </SectionBackground>
