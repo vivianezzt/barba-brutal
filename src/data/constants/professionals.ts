@@ -1,7 +1,5 @@
 import Professional from "@/core/professional/Professional";
 
-
-
 const professional: Professional[] = [
   {
     id: 1,
