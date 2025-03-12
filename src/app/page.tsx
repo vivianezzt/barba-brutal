@@ -1,3 +1,4 @@
+import OurCustomers from "@/components/customers/OurCustomers";
 import Slogan from "@/components/landing/Slogan";
 import OurProfessionals from "@/components/professional/OurProfessionals";
 import OurServices from "@/components/service/OurServices";
@@ -16,6 +17,11 @@ export default function Home() {
       <SectionBackground image="/banners/profissionais.webp">
         <OurProfessionals />
       </SectionBackground>
+
+      <SectionBackground image="/banners/clientes.webp">
+        <OurCustomers />
+      </SectionBackground>
+      
     <Footer />
     </div>
   );
