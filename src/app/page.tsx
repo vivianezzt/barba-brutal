@@ -1,3 +1,4 @@
+import OurProfessionals from "@/components/professional/OurProfessionals";
 import OurServices from "@/components/service/OurServices";
 
 export default function Home() {
@@ -5,6 +6,7 @@ export default function Home() {
     <div className="container mx-auto">
       <h1>Landing-page</h1>
       <OurServices />
+      <OurProfessionals />
     </div>
   );
 }
