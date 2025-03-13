@@ -1,5 +1,6 @@
 import OurProfessionals from "@/components/professional/OurProfessionals";
 import OurServices from "@/components/service/OurServices";
+import Footer from "@/components/shared/Footer";
 import SectionBackground from "@/components/shared/SecctionBackground";
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
        <SectionBackground image="/banners/profissionais.webp">
         <OurProfessionals />
       </SectionBackground>
+      <Footer />
     </div>
   );
 }
