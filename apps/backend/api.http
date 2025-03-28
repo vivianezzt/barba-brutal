@@ -2,7 +2,19 @@
 GET http://localhost:3000/
 
 ###
-POST http://localhost:3000/ping
+GET  http://localhost:3000/ping
 
 ### 
 POST http://localhost:3000/auth/login
+
+### 
+POST http://localhost:3000/auth/register
+Content-Type: application/json 
+
+{
+    "name": "guilerme cozzatti",
+    "email": "guiczzt65@zmail.com",
+    "password": "123456",
+    "phone": "11999999999",
+    "barber": false
+}
