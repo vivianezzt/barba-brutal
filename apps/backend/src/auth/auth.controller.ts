@@ -1,6 +1,6 @@
 import { Body, Controller, HttpException, Post } from "@nestjs/common"
-import User from "./user"
 import { UserRepository } from "./user.repository"
+import { User } from "@barbabrutal/core"
 
 @Controller("auth")
 export class AuthController {

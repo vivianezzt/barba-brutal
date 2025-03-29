@@ -1,7 +1,7 @@
 import professionals from '@/data/constants/professionals'
 import ItemProfessional from './ItemProfessional'
-import Professional from '@/core/professional/Professional'
 import TitleSection from '../shared/TitleSection'
+import { Professional } from '@barbabrutal/core'
 
 export default function OurProfessionals() {
   return (

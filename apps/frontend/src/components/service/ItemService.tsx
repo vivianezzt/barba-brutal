@@ -1,4 +1,4 @@
-import Service from '@/core/service/Service'
+import { Service } from '@barbabrutal/core'
 import Image from 'next/image'
 
 export interface ItemServiceProps {

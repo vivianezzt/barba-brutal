@@ -1,4 +1,5 @@
-import Service from '@/core/service/Service'
+import { Service } from "@barbabrutal/core"
+
 
 const services: Service[] = [
   {

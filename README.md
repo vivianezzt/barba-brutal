@@ -31,9 +31,14 @@ O projeto foi desenvolvido com as seguintes tecnologias:
 
 ```bash
 barba-brutal/
-├── backend/   # API e lógica do servidor
-├── frontend/  # Interface web
-└── mobile/    # Aplicação mobile
+├── apps/
+│   ├── backend/     # O backend do projeto
+│   ├── frontend/    # O frontend do projeto
+│   └── mobile/      # app mobile
+├── packages/
+│   ├── core/        # O pacote @barbabrutal/core
+│   ├── ui/          # UI compartilhado
+├── package.json     # Configuração dos workspaces
 ```
 
 ## 🎯 Funcionalidades

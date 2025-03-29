@@ -1,5 +1,5 @@
+import { User } from "@barbabrutal/core"
 import { Injectable } from "@nestjs/common"
-import User from "./user"
 import { PrismaService } from "src/db/prisma.service"
 
 @Injectable()
