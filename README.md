@@ -1,84 +1,75 @@
-# Turborepo starter
+# Barba-Brutal ✂️🔥
 
-This Turborepo starter is maintained by the Turborepo core team.
+![Banner](./apps/frontend/public/barba-brutal.jpg)
 
-## Using this example
+<img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
+<img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" />
+<img src="https://img.shields.io/badge/NestJS-E0234E?style=for-the-badge&logo=nestjs&logoColor=white" />
+<img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white" />
+<img src="https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
+<img src="https://img.shields.io/badge/Expo-000020?style=for-the-badge&logo=expo&logoColor=white" />
 
-Run the following command:
+## 📌 Sobre o Projeto
 
-```sh
-npx create-turbo@latest
+**Barba-Brutal** é um sistema completo para uma barbearia moderna! A aplicação oferece serviços de **agendamento**, **login** e **cadastro de usuários**, garantindo uma experiência eficiente para clientes e administradores.
+
+Este projeto é composto por:
+- **Frontend**: Interface responsiva e intuitiva construída com **Next.js**.
+- **Backend**: API robusta desenvolvida com **NestJS** e **Node.js**.
+- **Mobile**: Aplicação mobile desenvolvida com **React Native** e **Expo**.
+
+## 🚀 Tecnologias Utilizadas
+
+O projeto foi desenvolvido com as seguintes tecnologias:
+- **TypeScript**
+- **Next.js**
+- **NestJS**
+- **Node.js**
+- **React Native (Expo)**
+
+## 📂 Estrutura do Projeto
+
+```bash
+barba-brutal/
+├── backend/   # API e lógica do servidor
+├── frontend/  # Interface web
+└── mobile/    # Aplicação mobile
 ```
 
-## What's inside?
+## 🎯 Funcionalidades
 
-This Turborepo includes the following packages/apps:
+✔️ Cadastro e autenticação de usuários 🔑
+✔️ Agendamento de serviços ✂️
+✔️ Dashboard administrativo 📊
+✔️ Integração entre web e mobile 📱💻
 
-### Apps and Packages
+## 🛠️ Como Rodar o Projeto
 
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
-
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
-
-### Utilities
-
-This Turborepo has some additional tools already setup for you:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
-
-### Build
-
-To build all apps and packages, run the following command:
-
-```
-cd my-turborepo
-pnpm build
+### Backend
+```bash
+cd backend
+npm install
+npm run start
 ```
 
-### Develop
-
-To develop all apps and packages, run the following command:
-
-```
-cd my-turborepo
-pnpm dev
+### Frontend
+```bash
+cd frontend
+npm install
+yarn dev
 ```
 
-### Remote Caching
-
-> [!TIP]
-> Vercel Remote Cache is free for all plans. Get started today at [vercel.com](https://vercel.com/signup?/signup?utm_source=remote-cache-sdk&utm_campaign=free_remote_cache).
-
-Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup?utm_source=turborepo-examples), then enter the following commands:
-
-```
-cd my-turborepo
-npx turbo login
+### Mobile
+```bash
+cd mobile
+npm install
+expo start
 ```
 
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
+## 📞 Contato
 
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
+Desenvolvido por **Viviane Aguiar** 💜
 
-```
-npx turbo link
-```
+[![Instagram](https://img.shields.io/badge/-Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/vivianezzt/)
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/vivianezzt/)
 
-## Useful Links
-
-Learn more about the power of Turborepo:
-
-- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
