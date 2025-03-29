@@ -1,31 +1,21 @@
-import { Body, Controller, Post } from '@nestjs/common';
-import { PrismaService } from 'src/db/prisma.service';
+import { Body, Controller, HttpException, Post } from "@nestjs/common"
+import User from "./user"
+import { UserRepository } from "./user.repository"
 
-interface User {
-  id?: number;
-  name: string;
-  email: string;
-  password?: string;
-  phone?: string;
-  barber?: boolean;
-}
-@Controller('auth')
+@Controller("auth")
 export class AuthController {
-  constructor(private readonly prisma: PrismaService) {}
-  @Post('login')
+  constructor(private readonly repo: UserRepository) {}
+  @Post("login")
   async login() {
-    return 'login';
+    return "login"
   }
-  @Post('register')
+  @Post("register")
   async register(@Body() user: User) {
-    return await this.prisma.user.create({
-      data: {
-        name: user.name,
-        email: user.email,
-        password: user.password,
-        phone: user.phone,
-        barber: user.barber ?? false,
-      },
-    });
+    const userExists = await this.repo.findByEmail(user.email)
+    if (userExists) {
+      throw new HttpException("User already exists", 400)
+    }
+    await this.repo.save({ ...user, barber: false })
+    return { message: "User registered successfully" }
   }
 }

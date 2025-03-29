@@ -1,6 +1,6 @@
-import Link from "next/link";
-import Logo from "./Logo";
-import { Button } from "../ui/button";
+import Link from 'next/link'
+import Logo from './Logo'
+import { Button } from '../ui/button'
 
 export default function HeaderBar() {
   return (
@@ -8,11 +8,11 @@ export default function HeaderBar() {
       <nav className="container flex items-center justify-between">
         <Logo />
         <div>
-         <Button className="bg-gradient-to-r from-yellow-500 to-yellow-600">
-          <Link href="/entrar">Entrar</Link>
-         </Button>
+          <Button className="bg-gradient-to-r from-yellow-500 to-yellow-600">
+            <Link href="/entrar">Entrar</Link>
+          </Button>
         </div>
       </nav>
     </header>
-  );
+  )
 }

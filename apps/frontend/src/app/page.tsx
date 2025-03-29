@@ -1,12 +1,9 @@
-
-import OurCustomers from "@/components/customers/OurCustomres";
-import Slogan from "@/components/landing/Slogan";
-import OurProfessionals from "@/components/professional/OurProfessionals";
-import OurServices from "@/components/service/OurServices";
-import Footer from "@/components/shared/Footer";
-import SectionBackground from "@/components/shared/SecctionBackground";
-
-
+import OurCustomers from '@/components/customers/OurCustomres'
+import Slogan from '@/components/landing/Slogan'
+import OurProfessionals from '@/components/professional/OurProfessionals'
+import OurServices from '@/components/service/OurServices'
+import Footer from '@/components/shared/Footer'
+import SectionBackground from '@/components/shared/SecctionBackground'
 
 export default function Home() {
   return (
@@ -23,8 +20,8 @@ export default function Home() {
       <SectionBackground image="/banners/clientes.webp">
         <OurCustomers />
       </SectionBackground>
-      
-    <Footer />
+
+      <Footer />
     </div>
-  );
+  )
 }

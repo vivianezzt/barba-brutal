@@ -12,8 +12,8 @@ POST http://localhost:3000/auth/register
 Content-Type: application/json 
 
 {
-    "name": "guilerme cozzatti",
-    "email": "guiczzt65@zmail.com",
+    "name": "guilerme soares",
+    "email": "guisoares@zmail.com",
     "password": "123456",
     "phone": "11999999999",
     "barber": false

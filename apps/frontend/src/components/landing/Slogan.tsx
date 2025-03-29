@@ -1,12 +1,12 @@
-import Image from "next/image";
-import Header from "../shared/HeaderBar";
-import Link from "next/link";
+import Image from 'next/image'
+import Header from '../shared/HeaderBar'
+import Link from 'next/link'
 
 export default function Slogan() {
   return (
     <div className="relative h-[450px] sm:h-[700px]">
       <Image
-        src={"/banners/principal.webp"}
+        src={'/banners/principal.webp'}
         alt="Barbearia"
         fill
         className="object-cover"
@@ -26,7 +26,7 @@ export default function Slogan() {
             🤘 Seu estilo é nosso Rock🎸! 🤘
           </p>
           <Link
-            href={"/agendamento"}
+            href={'/agendamento'}
             className="rounded-lg bg-gradient-to-r from-yellow-500 to-yellow-600 px-4 py-2 text-base font-semibold text-white hover:from-yellow-600 hover:to-yellow-500 md:text-lg"
           >
             Agendar agora
@@ -34,5 +34,5 @@ export default function Slogan() {
         </div>
       </div>
     </div>
-  );
+  )
 }

@@ -1,8 +1,8 @@
-import Image from "next/image";
+import Image from 'next/image'
 
 export interface SectionBackgroundProps {
-  children: React.ReactNode;
-  image: string;
+  children: React.ReactNode
+  image: string
 }
 export default function SectionBackground(props: SectionBackgroundProps) {
   return (
@@ -17,5 +17,5 @@ export default function SectionBackground(props: SectionBackgroundProps) {
         <div className="container py-10">{props.children}</div>
       </div>
     </div>
-  );
+  )
 }
